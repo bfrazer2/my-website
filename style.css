@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace
 }
 
 body {
@@ -11,14 +12,37 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: flex-end;
+    width: 1500px;
     background-image: url("images/Ben%20and%20Byron.jpg");
 }
 
+.dropdown-button {
+    background-color: #808080;
+    width:200px;
+    color: black;
+    font-size: 16px;
+}
+
 nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    
+    width: 200px;
+    height: 90%;
+    background-color: #80808090;
+    align-items: flex-start;
+}
+
+.dropdown:hover nav{display: flex;}
+
+.navitem {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    font-size:larger;
+    color: black;
+    text-decoration: none;
+    border: solid black;
 }
 
 main {
@@ -27,19 +51,10 @@ main {
 }
 
 .container {
-    /* width: 500px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%; */
     width: 100%;
     overflow: hidden;
-    /* border: 10px solid #ffffff; */
-    border-radius: 8px;
-    box-shadow: -1px 5px 15px black;
 }
 
-/*Area of images*/
 .slideshow {
     width: 100%;
     display: flex;
@@ -50,24 +65,20 @@ img{
     width: 100%;
 }
 
-#me-photo {
-
-}
-
 @keyframes slide{
     0%{
         transform: translateX(0);
     }
-    45%{
-        transform: translateX(-100%)
+    25%{
+        transform: translateX(-100%);
     }
     50%{
-        transform: translateX(-100%)
+        transform: translateX(-100%);
     }
-    95%{
-        transform: translateX(0)
+    75%{
+        transform: translateX(0);
     }
     100%{
-        transform: translateX(0)
+        transform: translateX(0);
     }
 }
