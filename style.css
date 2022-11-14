@@ -3,11 +3,6 @@
     box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
-}
-
 body {
     display: flex;
     flex-direction: row-reverse;
@@ -16,6 +11,14 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    background-image: url("images/Ben%20and%20Byron.jpg");
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    
 }
 
 main {
@@ -23,4 +26,48 @@ main {
     flex-direction: row;
 }
 
+.container {
+    /* width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%; */
+    width: 100%;
+    overflow: hidden;
+    /* border: 10px solid #ffffff; */
+    border-radius: 8px;
+    box-shadow: -1px 5px 15px black;
+}
 
+/*Area of images*/
+.slideshow {
+    width: 100%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+img{
+    width: 100%;
+}
+
+#me-photo {
+
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    45%{
+        transform: translateX(-100%)
+    }
+    50%{
+        transform: translateX(-100%)
+    }
+    95%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}

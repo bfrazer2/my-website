@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ben Frazer</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            let counter = 0;
+            let images = ['images/Act%20Up.jpeg', 'images/soft.jpeg'];
+
+            function myFunction() {
+                counter++;
+                if (counter < images.length-1) {
+                    counter = 0
+                }
+                target = document.getElementById ("work-photo").src = images[counter];
+                setInterval("myFunction", 3000)
+            }
+            window.onload = function(){
+                myFunction(); 
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Ben Frazer</h1>
+            <nav>
+                <a href="#">Poet</a>
+                <a href="#">Teacher</a>
+                <a href="#">Software Engineer</a>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="slideshow" id="work-photo">
+                    <img height="835px" src="images/Act%20Up.jpeg" alt="Act Up"/>
+                    <img height="835px" src="images/soft.jpeg" alt="soft"/>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
