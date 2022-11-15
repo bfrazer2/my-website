@@ -4,10 +4,14 @@
     font-family:'Courier New', Courier, monospace
 }
 
-body {
+.not-footer {
     display: flex;
+    height: 95vh;
     flex-direction: row-reverse;
-    background: radial-gradient(rgb(47, 0, 255, 0.591),rgb(102, 139, 184))
+    background: radial-gradient(rgb(47, 0, 255, 0.591),rgb(102, 139, 184));
+    background-image: url("images/Site%20Background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -56,12 +60,12 @@ ul {
     }
 }
 
-ul:hover {
+body ul:hover {
     display: block;
     
 }
 
-li {
+header li {
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -72,7 +76,7 @@ li {
     border: solid white;
 }
 
-a {
+header a {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -85,39 +89,95 @@ a:hover {
 main {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: calc(100vw - 400px);
+    margin: 1em;
+    overflow: hidden;
 }
 
-.container {
-    width: 1285px;
+.container { 
+    width: 600px;
+    height: 85vh;
+    min-height: 700px;
     overflow: hidden;
     border: solid black;
     border-radius: 2em;
 }
 
-.slideshow {
-    width: 100%;
+#work-photos-1 {
     display: flex;
-    animation: slide 32s infinite;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    min-height: inherit;
+    animation: slide-up 32s infinite;
 }
 
-main img {
+#work-photos-2 {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    min-height: inherit;
+    animation: slide-down 32s infinite;
+}
+
+.slideshow-image {
+    min-height: 100%;
     border: solid black;
 }
 
-@keyframes slide{
+@keyframes slide-up{
     0%{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     25%{
-        transform: translateX(-100%);
+        transform: translateY(-100%);
     }
     50%{
-        transform: translateX(-100%);
+        transform: translateY(-100%);
     }
     75%{
-        transform: translateX(0);
+        transform: translateY(0);
     }
     100%{
-        transform: translateX(0);
+        transform: translateY(0);
     }
+}
+
+@keyframes slide-down{
+    0%{
+        transform: translateY(-100%);
+    }
+    25%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.footer {
+    height: 5vh;
+    background-color: white; 
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer li {
+    color: black;
+}
+
+footer a {
+    color: black;
 }
