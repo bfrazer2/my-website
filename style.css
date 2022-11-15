@@ -7,6 +7,7 @@
 body {
     display: flex;
     flex-direction: row-reverse;
+    background: radial-gradient(rgb(47, 0, 255, 0.591),rgb(102, 139, 184))
 }
 
 header {
@@ -15,14 +16,17 @@ header {
     background-image: url("images/Ben%20and%20Byron.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hiddens;
+    overflow: hidden;
 }
 
+
 #dropdown-button {
-    background-color: #808080;
+    background: rgb(80,80,80,0);
+    border: none;
     width:100%;
     position: relative;
-    color: black;
+    color: white;
+    -webkit-text-stroke: 2px black;
     font-size: 48px;
     font-weight:900;
 }
@@ -31,7 +35,7 @@ ul {
     display: none;
     position: absolute;
     height: 100%;
-    background: #808080;
+    background: rgb(00,00,00,.9);
     opacity: .9;
     width: 100%;
     }
@@ -65,12 +69,12 @@ li {
     margin-bottom: 3em;
     font-size: 24px;
     font-weight: 600;
-    border: solid black;
+    border: solid white;
 }
 
 a {
     display: inline-block;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -84,9 +88,10 @@ main {
 }
 
 .container {
-    width: 1280px;
+    width: 1285px;
     overflow: hidden;
     border: solid black;
+    border-radius: 2em;
 }
 
 .slideshow {
@@ -95,7 +100,7 @@ main {
     animation: slide 32s infinite;
 }
 
-img {
+main img {
     border: solid black;
 }
 
