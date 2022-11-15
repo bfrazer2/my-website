@@ -10,47 +10,72 @@ body {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 1500px;
-    height: 100%;
+    position: relative;
+    min-width: 400px;
     background-image: url("images/Ben%20and%20Byron.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hiddens;
 }
 
-.dropdown-button {
+#dropdown-button {
     background-color: #808080;
-    width:200px;
+    width:100%;
+    position: relative;
     color: black;
-    font-size: 16px;
+    font-size: 48px;
+    font-weight:900;
 }
 
-h1 {
-    border: solid black;
-    width: 200px;
-}
-
-nav {
+ul {
     display: none;
-    flex-direction: column;
-    width: 200px;
-    height: 90%;
-    background-color: #80808090;
-    align-items: flex-start;
+    position: absolute;
+    height: 100%;
+    background: #808080;
+    opacity: .9;
+    width: 100%;
+    }
+
+
+#dropdown-button:hover ~ ul{
+    display: block;
+    animation: border-anim .75s 1 ease-out reverse;
+    transition: all 0.5s ease;
 }
 
-.dropdown:hover nav{display: flex;}
+@keyframes border-anim {
+    0% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
 
-.navitem {
-    display: flex;
-    width: 200px;
-    height: 100px;
-    font-size:larger;
+ul:hover {
+    display: block;
+    
+}
+
+li {
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-size: 24px;
+    font-weight: 600;
+    border: solid black;
+}
+
+a {
+    display: inline-block;
     color: black;
     text-decoration: none;
-    border: solid black;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -59,18 +84,19 @@ main {
 }
 
 .container {
-    width: 100%;
+    width: 1280px;
     overflow: hidden;
+    border: solid black;
 }
 
 .slideshow {
     width: 100%;
     display: flex;
-    animation: slide 16s infinite;
+    animation: slide 32s infinite;
 }
 
-img{
-    width: 100%;
+img {
+    border: solid black;
 }
 
 @keyframes slide{
