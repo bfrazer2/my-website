@@ -159,3 +159,24 @@ footer > div {
     display: flex;
     flex-direction: row;
 }
+
+@media only screen and (max-width: 1500px) {
+
+    main {
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    main {
+        flex-wrap: nowrap;
+    }
+    .page-header {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .text-box {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
