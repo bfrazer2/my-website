@@ -171,3 +171,25 @@ footer > div {
     display: flex;
     flex-direction: row;
 }
+
+@media only screen and (max-width: 1050px) {
+    
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-width: 200px;
+        max-height: 800px;
+        overflow: auto;
+        justify-items: space-around;
+    }
+    .text-box img {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        min-height: 600px;
+        max-height: 250px;
+        max-width: 250px;
+    }
+}

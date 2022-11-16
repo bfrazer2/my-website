@@ -151,7 +151,6 @@ main {
     margin: 1em;
 }
 
-
 .footer {
     position: absolute;
     bottom: 0;
@@ -169,4 +168,39 @@ footer {
 footer > div {
     display: flex;
     flex-direction: row;
+}
+
+@media only screen and (max-width: 1050px) {
+    
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-width: 200px;
+        max-height: 800px;
+        justify-items: space-around;
+    }
+    .text-box img {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        max-height: 200px;
+        max-width: 200px;
+    }
+    .image-box {
+        width:auto;
+        height: auto;
+        min-width: 200px;
+        max-height: 800px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        justify-items: space-around;
+    }
+    .image-box img{
+        width: 95%;
+        min-width:200px;
+    }
 }
