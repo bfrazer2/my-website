@@ -92,7 +92,7 @@ main {
     overflow: hidden;
 }
 
-.container { 
+.container {
     width: 600px;
     height: 85vh;
     min-height: 700px;
@@ -163,7 +163,7 @@ main {
 .footer {
     justify-content: space-around;
     height: 2vh;
-    background-color: white; 
+    background-color: white;
 }
 
 footer {
@@ -177,7 +177,7 @@ footer > div {
     flex-direction: row;
 }
 
-@media only screen and (max-width: 1575px) {
+@media screen and (max-width: 1575px) {
     
     main {
         align-items: center;
@@ -197,7 +197,7 @@ footer > div {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
    
      .not-footer {
         flex-direction: column;
@@ -266,7 +266,7 @@ footer > div {
         margin-top: 1rem;
     }
 
-    .container-1{ 
+    .container-1 {
         width: 600px;
         height: 85vh;
         min-height: 700px;
